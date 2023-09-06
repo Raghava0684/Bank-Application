@@ -1,0 +1,61 @@
+.container {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 9;
+}
+
+.modal__overlay {
+  background-color: #27292b;
+  height: 100%;
+  opacity: 0.8;
+  width: 100%;
+  z-index: 10;
+}
+
+.modal {
+  background-color: #ffffff;
+  border: 1px solid rgba(119, 129, 135, 0.3960784314);
+  border-radius: 1.8rem;
+  box-shadow: 0 10px 16px rgba(119, 129, 135, 0.3960784314);
+  color: black;
+  flex-flow: column nowrap;
+  left: 50%;
+  max-width: 250px;
+  padding: 2rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transition: 200ms;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.modal--hidden {
+  display: none;
+}
+
+.modal--display {
+  display: flex;
+}
+
+.modal__button {
+  background-color: #27292b;
+  border-radius: 1.2rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem;
+  text-align: center;
+  text-decoration: none;
+  transition: filter 400ms ease-in-out;
+}
+.modal__button:disabled {
+  opacity: 0.5;
+}
+.modal__button:hover {
+  filter: brightness(200%);
+}/*# sourceMappingURL=Modal.module.css.map */

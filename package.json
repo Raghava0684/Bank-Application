@@ -1,0 +1,34 @@
+{
+  "name": "fullstack-bank",
+  "version": "1.0.0",
+  "description": "Full stack fine tech app with Next.js and Express.js",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e": "cypress run --browser electron --e2e",
+    "test:e2e:open": "cypress open --browser electron --e2e",
+    "test:integration": "cd app/backend && npm i && npm run test:coverage",
+    "test": "npm run test:e2e && npm run test:integration",
+    "compose:up": "cd app && docker-compose up -d",
+    "compose:up:build": "cd app && docker-compose up -d --build",
+    "compose:down": "cd app && docker-compose down --remove-orphans",
+    "postinstall": "cd app/backend && npm i && cd ../frontend && npm i"
+  },
+  "author": "Raphael Martins",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.7",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "5.3.1",
+    "@typescript-eslint/parser": "5.3.1",
+    "cypress": "^11.1.0",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "15.0.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-sonarjs": "0.10.0",
+    "ts-node": "10.7.0",
+    "ts-node-dev": "1.1.8",
+    "typescript": "4.4.4"
+  }
+}
